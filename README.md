@@ -31,6 +31,7 @@ A simple Laravel-based web application that allows users to generate professiona
 - Blade templates
 - Vanilla CSS
 - PHP 8.2+
+- tcpdf library
 
 ---
 
