@@ -3,7 +3,7 @@
 A simple Laravel-based web application that allows users to generate professional-looking PDF certificates through a form interface.
 
 🔗 **Live Demo:**  
-[https://certificate-generater.laravel.cloud/certificate](https://certificate-generater-main-jh2xbw.laravel.cloud/certificate)
+[https://certificate-generater.laravel.cloud](https://certificate-generater.laravel.cloud)
 
 ---
 
