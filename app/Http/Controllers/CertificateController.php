@@ -6,9 +6,11 @@ use TCPDF_FONTS;
 
 class CertificateController extends Controller
 {
+
+
     public function form()
     {
-        return view('certificate.form');
+        return view('form');
     }
 
     public function generate(Request $request)

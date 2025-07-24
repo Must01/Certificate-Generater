@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+@font-face {
+    font-family: "ImperialScript";
+    src: url("/fonts/ImperialScript-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    scroll-behavior: smooth;
+}
+
+.ImperialScript {
+    font-family: "ImperialScript", "sans-serif";
+}
