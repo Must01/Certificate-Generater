@@ -54,7 +54,7 @@
                             </div>
                             <div class="flex-1 mr-2">
                                 <h3 class="font-semibold text-[#2E382E] group-hover:text-pink-500 transition-colors">{{ __('app.instagram') }}</h3>
-                                <p class="text-sm text-gray-500">{{ __('instagram_desc') }}</p>
+                                <p class="text-sm text-gray-500">{{ __('app.instagram_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="flex-1 mr-2">
                                 <h3 class="font-semibold text-[#2E382E] group-hover:text-[#FF5E5B] transition-colors">{{ __('app.kofi') }}</h3>
-                                <p class="text-sm text-gray-500">{{ __('kofi_desc') }}</p>
+                                <p class="text-sm text-gray-500">{{ __('app.kofi_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#FF5E5B] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -116,7 +116,7 @@
                             </div>
                             <div class="flex-1 mr-2">
                                 <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.buy_coffee') }}</h3>
-                                <p class="text-sm text-gray-500">{{ __('coffee_desc') }}</p>
+                                <p class="text-sm text-gray-500">{{ __('app.coffee_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

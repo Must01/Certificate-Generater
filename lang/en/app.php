@@ -48,6 +48,10 @@ return [
     'twitter' => 'Twitter',
     'twitter_desc' => 'Follow me for updates',
     'coffee_desc' => 'Support my work',
+    'instagram' => 'Instagram',
+    'instagram_desc' => 'Follow me on Instagram for updates.',
+    'kofi' => 'Ko-fi',
+    'kofi_desc' => 'Support me by buying a Ko-fi.',
 
     // Generate Certificate Page
     'generate_page_title' => 'Generate Your Certificate',
