@@ -2,16 +2,16 @@
     <div class="min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
             <div class="max-w-3xl mx-auto text-center mb-16 lg:mb-20">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E382E] font-playfair mb-6">Let's Connect</h1>
-                <p class="text-lg sm:text-xl text-gray-600">Reach out to us for any questions, suggestions, or collaborations</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E382E] font-playfair mb-6">{{ __('app.contact_title') }}</h1>
+                <p class="text-lg sm:text-xl text-gray-600">{{ __('app.contact_subtitle') }}</p>
             </div>
 
             <div class="max-w-3xl mx-auto">
                 <!-- All Links -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 lg:p-10">
                     <div class="text-center mb-10">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-[#2E382E] font-playfair mb-4">All Links</h2>
-                        <p class="text-gray-600">Find all my important links in one place</p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-[#2E382E] font-playfair mb-4">{{ __('app.all_links') }}</h2>
+                        <p class="text-gray-600">{{ __('app.all_links_subtitle') }}</p>
                     </div>
 
                     <div class="space-y-6">
@@ -23,8 +23,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">Linktree</h3>
-                                <p class="text-sm text-gray-500">All my links in one place</p>
+                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.linktree') }}</h3>
+                                <p class="text-sm text-gray-500">{{ __('app.linktree_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -39,8 +39,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">Email</h3>
-                                <p class="text-sm text-gray-500">mustaphabouddahr.dev@gmail.com</p>
+                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.email') }}</h3>
+                                <p class="text-sm text-gray-500">{{ __('app.email_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -55,8 +55,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">GitHub</h3>
-                                <p class="text-sm text-gray-500">Check out my open source projects</p>
+                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.github') }}</h3>
+                                <p class="text-sm text-gray-500">{{ __('app.github_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -71,24 +71,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">LinkedIn</h3>
-                                <p class="text-sm text-gray-500">Connect with me professionally</p>
-                            </div>
-                            <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-
-                        <!-- Twitter -->
-                        <a href="#" target="_blank" class="flex items-center p-4 rounded-xl border border-gray-100 hover:border-[#50C9CE] hover:shadow-md transition-all duration-300 group">
-                            <div class="w-12 h-12 bg-[#50C9CE]/10 rounded-xl flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-[#2E382E]" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">Twitter</h3>
-                                <p class="text-sm text-gray-500">Follow me for updates</p>
+                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.linkedin') }}</h3>
+                                <p class="text-sm text-gray-500">{{ __('app.linkedin_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -101,8 +85,8 @@
                                 <span class="text-xl">☕</span>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">Buy Me a Coffee</h3>
-                                <p class="text-sm text-gray-500">Support my work</p>
+                                <h3 class="font-semibold text-[#2E382E] group-hover:text-[#50C9CE] transition-colors">{{ __('app.buy_coffee') }}</h3>
+                                <p class="text-sm text-gray-500">{{ __('coffee_desc') }}</p>
                             </div>
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#50C9CE] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

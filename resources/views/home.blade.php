@@ -7,12 +7,12 @@
 
         <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-balance text-[#2E382E] font-playfair leading-tight mb-8">Create Professional Certificates in Minutes</h1>
-                <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Generate beautiful, customizable certificates for your courses, workshops, and events with our easy-to-use certificate generator.</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-balance text-[#2E382E] font-playfair leading-tight mb-8">{{ __('app.hero_title') }}</h1>
+                <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">{{ __('app.hero_description') }}</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="{{ route('certificate.form') }}" class="rounded-lg bg-[#2E382E] px-6 py-3 text-base sm:text-lg font-semibold text-[#50C9CE] shadow-lg hover:bg-white transition-all duration-300 hover:scale-105">Generate Certificate</a>
+                    <a href="/generate" class="rounded-lg bg-[#2E382E] px-6 py-3 text-base sm:text-lg font-semibold text-[#50C9CE] shadow-lg hover:bg-white transition-all duration-300 hover:scale-105"> {{ __('app.generate_certificate') }} </a>
                     <a href="#features" class="text-base sm:text-lg font-semibold text-gray-700 hover:text-white transition-colors duration-300 group">
-                        Learn more
+                        {{ __('app.learn_more') }}
                         <span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </a>
                 </div>
@@ -28,8 +28,8 @@
     <section id="features" class="bg-white">
         <div class="max-w-7xl py-16 mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2E382E] font-playfair mb-6">Features</h2>
-                <p class="text-lg sm:text-xl text-gray-600">Everything you need to create professional certificates</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2E382E] font-playfair mb-6">{{ __('app.features_title') }}</h2>
+                <p class="text-lg sm:text-xl text-gray-600">{{ __('app.features_subtitle') }}</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -40,8 +40,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V5a2 2 0 00-2-2H8a2 2 0 00-2 2v2m12 10a2 2 0 01-2 2H6a2 2 0 01-2-2V7"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">Language Selection</h3>
-                    <p class="text-gray-600">Choose the language of your certificate form English or Arabic for a personalized experience.</p>
+                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">{{ __('app.feature_language_title') }}</h3>
+                    <p class="text-gray-600">{{ __('app.feature_language_desc') }}</p>
                 </div>
 
                 <!-- Feature 2 -->
@@ -51,8 +51,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">Instant Download</h3>
-                    <p class="text-gray-600">Generate and download your certificates instantly in high-quality PDF format.</p>
+                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">{{ __('app.feature_download_title') }}</h3>
+                    <p class="text-gray-600">{{ __('app.feature_download_desc') }}</p>
                 </div>
 
                 <!-- Feature 3 -->
@@ -62,8 +62,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">Easy Customization</h3>
-                    <p class="text-gray-600">Customize your certificates with names, dates, courses, and other details in just a few clicks.</p>
+                    <h3 class="text-xl font-bold text-[#2E382E] mb-4">{{ __('app.feature_custom_title') }}</h3>
+                    <p class="text-gray-600">{{ __('app.feature_custom_desc') }}</p>
                 </div>
             </div>
         </div>

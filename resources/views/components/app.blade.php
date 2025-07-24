@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-[#50C9CE] scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}" class="h-full bg-[#50C9CE] scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Certificate Generator</title>
+    <title>{{ __('app.nav_title') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    @if(app()->getLocale() == 'ar')
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <style>
+            body { font-family: 'Cairo', sans-serif; }
+        </style>
+    @endif
 </head>
 <body class="h-full">
 <div class="min-h-full">
@@ -15,47 +21,100 @@
     <header class="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" class="flex items-center justify-between p-5 lg:px-8">
             <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <h2 class="ImperialScript font-bold text-xl">Certificate Generater</h2>
+                <a href="/" class="-m-1.5 p-1.5">
+                    <h2 class="font-bold text-gray-800 text-xl">{{ __('app.nav_title') }}</h2>
                 </a>
             </div>
+
+            <!-- Mobile menu toggle -->
             <div class="flex lg:hidden">
                 <button id="open-menu" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open menu</span>
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                    <span class="sr-only">{{ __('app.open_menu') }}</span>
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
             </div>
+
+            <!-- Desktop nav links -->
             <div class="hidden lg:flex lg:gap-x-12">
-                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                <x-nav-link href="/generate" :active="request()->is('generate')">Generate</x-nav-link>
-                <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                <x-nav-link href="/" :active="request()->is('/')">
+                    {{ __('app.nav_home') }}
+                </x-nav-link>
+                <x-nav-link href="/generate" :active="request()->is('generate')">
+                    {{ __('app.nav_generate') }}
+                </x-nav-link>
+                <x-nav-link href="/contact" :active="request()->is('contact')">
+                    {{ __('app.contact') }}
+                </x-nav-link>
             </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm/6 font-semibold text-gray-900">
-                    <img src="{{ asset('images/github.png') }}" alt="" class="size-8">
+
+            <!-- Language switcher & GitHub -->
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
+                <!-- Language Switcher -->
+                <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-1 border border-white/20">
+                    <a href="{{ url('lang/en') }}"
+                       class="px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 {{ app()->getLocale() === 'en' ? 'bg-white text-[#2E382E] shadow-sm' : 'text-gray-700 hover:text-[#2E382E] hover:bg-white/50' }}">
+                        EN
+                    </a>
+                    <a href="{{ url('lang/ar') }}"
+                       class="px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 {{ app()->getLocale() === 'ar' ? 'bg-white text-[#2E382E] shadow-sm' : 'text-gray-700 hover:text-[#2E382E] hover:bg-white/50' }}">
+                        عربي
+                    </a>
+                </div>
+
+                <!-- GitHub Icon -->
+                <a href="https://github.com/Must01" target="_blank" class="p-2 text-gray-700 hover:text-[#2E382E] transition-colors rounded-lg hover:bg-white/10">
+                    <img src="{{ asset('images/github.png') }}" alt="GitHub" class="w-6 h-6">
                 </a>
             </div>
         </nav>
-        <!-- Mobile Menu (Hidden by default) -->
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed inset-0 z-50 bg-white p-6 lg:hidden hidden">
             <div class="flex items-center justify-between mb-6">
-            <div class="text-xl font-bold">Menu</div>
-            <button id="close-menu" class="p-2 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
+                <div class="text-xl font-bold text-[#2E382E]">{{ __('app.menu') }}</div>
+                <button id="close-menu" class="p-2 text-gray-700 hover:text-[#2E382E] rounded-lg hover:bg-gray-100">
+                    <span class="sr-only">{{ __('app.close_menu') }}</span>
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
 
-            <nav class="space-y-4">
-            <a href="#" class="block text-lg font-semibold hover:text-indigo-600">Home</a>
-            <a href="#" class="block text-lg font-semibold hover:text-indigo-600">About</a>
-            <a href="#" class="block text-lg font-semibold hover:text-indigo-600">Services</a>
-            <a href="#" class="block text-lg font-semibold hover:text-indigo-600">Contact</a>
+            <nav class="space-y-4 mb-8">
+                <x-nav-link href="/" :active="request()->is('/')" class="block py-2">
+                    {{ __('app.nav_home') }}
+                </x-nav-link>
+                <x-nav-link href="/generate" :active="request()->is('generate')" class="block py-2">
+                    {{ __('app.nav_generate') }}
+                </x-nav-link>
+                <x-nav-link href="/contact" :active="request()->is('contact')" class="block py-2">
+                    {{ __('app.contact') }}
+                </x-nav-link>
             </nav>
+
+            <!-- Mobile Language Switcher -->
+            <div class="flex justify-center mb-6">
+                <div class="flex bg-gray-100 rounded-lg p-1">
+                    <a href="{{ url('lang/en') }}"
+                       class="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 {{ app()->getLocale() === 'en' ? 'bg-white text-[#2E382E] shadow-sm' : 'text-gray-600 hover:text-[#2E382E]' }}">
+                        English
+                    </a>
+                    <a href="{{ url('lang/ar') }}"
+                       class="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 {{ app()->getLocale() === 'ar' ? 'bg-white text-[#2E382E] shadow-sm' : 'text-gray-600 hover:text-[#2E382E]' }}">
+                        العربية
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile GitHub Link -->
+            <div class="flex justify-center">
+                <a href="https://github.com/Must01" target="_blank" class="flex items-center gap-2 text-gray-600 hover:text-[#2E382E] transition-colors">
+                    <img src="{{ asset('images/github.png') }}" alt="GitHub" class="w-5 h-5">
+                    <span>GitHub</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -67,12 +126,12 @@
     <footer class="bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="flex items-center space-x-2">
-                    <span class="text-[#2E382E] font-medium">Made with</span>
+                <div class="flex items-center space-x-2 {{ app()->getLocale() == 'ar' ? 'space-x-reverse' : '' }}">
+                    <span class="text-[#2E382E] font-medium">{{ __('app.made_with') }}</span>
                     <span class="animate-pulse">💖</span>
-                    <span class="text-[#2E382E] font-medium">By</span>
+                    <span class="text-[#2E382E] font-medium">{{ __('app.by') }}</span>
                     <a href="https://linktr.ee/mustaphabouddahr" target="_blank" class="text-[#50C9CE] hover:text-[#45b0b4] font-semibold transition-colors">
-                        Mustapha Bouddahr
+                        {{ __('app.name') }}
                     </a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -86,7 +145,7 @@
                     <a href="https://www.buymeacoffee.com/mustaphabouddahr" target="_blank"
                         class="group flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-black font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300">
                         <span class="text-xl group-hover:rotate-12 transition-transform duration-300">☕</span>
-                        <span>Buy me a coffee</span>
+                        <span>{{ __('app.buy_coffee') }}</span>
                     </a>
                 </div>
             </div>
@@ -94,6 +153,23 @@
     </footer>
 
 </div>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const openMenuBtn = document.getElementById('open-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    openMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+</script>
 
 </body>
 </html>
