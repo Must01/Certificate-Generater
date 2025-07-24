@@ -77,5 +77,11 @@ return [
     'presented_to'    => 'Presented to',
     'for_outstanding' => 'For outstanding performance completing:',
     'date_format'     => 'F j, Y',   // PHP date format
-    'academy_label'   => ':academy Academy',
+    'academy_label'   => ' Academy',
+    'director_label' => 'Director',
+    'name_demo' => 'Full Name',
+    'course_demo' => "Course Name",
+    'academy_demo' => 'Academy Name',
+    'director_demo' =>'Director Name',
+    'date_demo' => 'Date'
 ];

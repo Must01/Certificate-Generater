@@ -129,8 +129,8 @@
                 <div class="flex items-center space-x-2 {{ app()->getLocale() == 'ar' ? 'space-x-reverse' : '' }}">
                     <span class="text-[#2E382E] font-medium">{{ __('app.made_with') }}</span>
                     <span class="animate-pulse">💖</span>
-                    <span class="text-[#2E382E] font-medium">{{ __('app.by') }}</span>
-                    <a href="https://linktr.ee/mustaphabouddahr" target="_blank" class="text-[#50C9CE] hover:text-[#45b0b4] font-semibold transition-colors">
+                    <span class="text-[#2E382E] font-medium"> {{ __('app.by') }} </span>
+                    <a href="https://linktr.ee/mustaphabouddahr" target="_blank" class="text-[#50C9CE] mr-1 hover:text-[#45b0b4] font-semibold transition-colors">
                         {{ __('app.name') }}
                     </a>
                 </div>

@@ -5,7 +5,7 @@ return [
     'nav_title' => 'منشئ الشهادات',
     'nav_home' => 'الرئيسية',
     'nav_generate' => 'إنشاء',
-    'contact' => 'اتصل بنا',
+    'contact' => 'تواصل معي',
     'menu' => 'القائمة',
     'close_menu' => 'إغلاق القائمة',
     'open_menu' => 'فتح القائمة',
@@ -77,5 +77,12 @@ return [
     'presented_to'    => 'مقدمة إلى',
     'for_outstanding' => 'لأداء متميز في إكمال:',
     'date_format'     => 'j F Y',    // adjust as you prefer in Arabic
-    'academy_label'   => 'أكاديمية :academy',
+    'academy_label'   => 'أكاديمية ',
+    'director_label' => 'المدير' ,
+    'name_demo' => 'الإسم الكامل',
+    'course_demo' => 'اسم دورة',
+    'academy_demo' => 'إسم الإكاديمية',
+    'director_demo' =>'إسم المدير',
+    'date_demo' => 'تاريخ'
+
 ];
