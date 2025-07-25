@@ -82,7 +82,7 @@
                 </button>
             </div>
 
-            <nav class="space-y-4 mb-8">
+            <nav class="space-y-4 flex flex-col text-center mb-8">
                 <x-nav-link href="/" :active="request()->is('/')" class="block py-2">
                     {{ __('app.nav_home') }}
                 </x-nav-link>
@@ -96,7 +96,7 @@
 
             <!-- Mobile Language Switcher -->
             <div class="flex justify-center mb-6">
-                <div class="flex bg-gray-100 rounded-lg p-1">
+                <div class="flex justify-between gap-1.5 bg-gray-100 rounded-lg p-1">
                     <a href="{{ url('lang/en') }}"
                        class="px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 {{ app()->getLocale() === 'en' ? 'bg-white text-[#2E382E] shadow-sm' : 'text-gray-600 hover:text-[#2E382E]' }}">
                         English

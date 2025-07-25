@@ -17,7 +17,7 @@ return [
     'name' => 'Mustapha Bouddahr',
 
     // Home Page
-    'hero_title' => 'Create Professional Certificates in Minutes',
+    'hero_title' => 'Create Professional Certificates in Seconds',
     'hero_description' => 'Generate beautiful, customizable certificates for your courses, workshops, and events with our easy-to-use certificate generator.',
     'generate_certificate' => 'Generate Certificate',
     'learn_more' => 'Learn more',

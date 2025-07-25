@@ -184,7 +184,7 @@
 
                 <!-- Right: Live Preview -->
                 <div class="lg:sticky lg:top-8">
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden p-8">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden  p-2 sm:p-2 lg:p-4 xl:p-8">
                         <div class="flex items-center space-x-4 mb-6">
                             <div class="w-10 h-10 rounded-full bg-[#50C9CE]/10 flex items-center justify-center">
                                 <svg class="w-5 h-5 text-[#50C9CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,88 +1,85 @@
-<div class="relative flex justify-center w-full bg-[#faf8f5] border shadow-lg rounded-lg overflow-hidden" style="aspect-ratio: 297/210;">
+<div class="relative w-full bg-[#faf8f5] border shadow-lg rounded-lg overflow-hidden" style="aspect-ratio: 297/210;">
 
-    <!-- Custom Logo (if uploaded) -->
-    <div x-show="logoPreview" class=" ">
-        <img :src="logoPreview" class="w-12 mt-2 h-12 object-contain" alt="Custom logo">
-    </div>
+    <!-- Main Content Container -->
+    <div class="absolute inset-0 flex flex-col p-1 sm:p-2 md:p-4 lg:p-4">
 
-    <!-- Title -->
-    <h1
-        class="absolute text-xs md:text-lg lg:text-xl font-bold text-[#2c3e50]"
-        style="top: 65px; left: 50%; transform: translateX(-50%); font-family: Playfair, serif;"
-    >
-        {{ __('app.cert_title') }}
-    </h1>
+        <!-- Top Section with Logo -->
+        <div class="flex flex-col items-center text-center w-full">
+            <!-- Custom Logo (if uploaded) -->
+            <div x-show="logoPreview" class="mb-1">
+                <img :src="logoPreview" class="w-3 h-3 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 object-contain" alt="Custom logo">
+            </div>
 
-    <!-- Underline -->
-    <div
-        class="absolute bg-[#C1A144]"
-        style="top: 100px; left: 50%; transform: translateX(-50%); width: 160px; height: 2px;"
-    ></div>
+            <!-- Title -->
+            <h1 class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-[#2c3e50] mb-1 px-1" style="font-family: Playfair, serif;">
+                {{ __('app.cert_title') }}
+            </h1>
 
-    <!-- Presented to -->
-    <p
-        class="absolute text-gray-600 text-sm"
-        style="top: 120px; left: 50%; transform: translateX(-50%);"
-    >
-        {{ __('app.presented_to') }}
-    </p>
+            <!-- Underline -->
+            <div class="bg-[#C1A144] w-8 sm:w-12 md:w-16 lg:w-20 xl:w-24 h-px sm:h-0.5"></div>
+        </div>
 
-    <!-- Full Name -->
-    <div
-        x-text="fullName || '{{ __('app.name_demo') }}'"
-        class="absolute text-[#27AE60] font-semibold text-xl border border-amber-300 px-10 py-0.5 rounded-lg"
-        style="top: 150px; left: 50%; transform: translateX(-50%);"
-    ></div>
+        <!-- Middle Section - Flexible -->
+        <div class="flex flex-col items-center text-center w-full flex-1 justify-center space-y-1 sm:space-y-2">
+            <!-- Presented to -->
+            <p class="text-gray-600 text-xs sm:text-sm md:text-base">
+                {{ __('app.presented_to') }}
+            </p>
 
-    <!-- for outstanding -->    
-    <p
-        class="absolute text-gray-800 font-bold text-xs"
-        style="top: 195px; left: 50%; transform: translateX(-50%);"
-    >
-        {{ __('app.for_outstanding') }}
-    </p>
+            <!-- Full Name -->
+            <div x-text="fullName || '{{ __('app.name_demo') }}'"
+                 class="text-[#27AE60] font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl border border-amber-300 px-2 sm:px-3 md:px-4 lg:px-6 py-1 rounded text-center max-w-[90%] break-words">
+            </div>
 
-    <!-- Course -->
-    <p
-        x-text="course || '{{ __('app.course_demo') }}'"
-        class="absolute text-gray-800 font-bold text-sm"
-        style="top: 225px; left: 50%; transform: translateX(-50%);"
-    ></p>
+            <!-- For outstanding -->
+            <p class="text-gray-800 font-bold  text-[8px] sm:text-xs md:text-base">
+                {{ __('app.for_outstanding') }}
+            </p>
 
-    <!-- Date -->
-    <p
-        x-text="date ? new Date(date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' }) : '{{ __('app.date_demo') }}'"
-        class="absolute text-gray-600 italic text-base"
-        style="top: 255px; left: 50%; transform: translateX(-50%);"
-    ></p>
+            <!-- Course -->
+            <p x-text="course || '{{ __('app.course_demo') }}'"
+               class="text-gray-800 font-bold text-xs sm:text-sm md:text-base lg:text-lg text-center max-w-[95%] break-words px-2">
+            </p>
 
-    <!-- Award Badge -->
-    <img
-        src="{{ asset('images/award.png') }}"
-        class="absolute"
-        style="top: 290px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px;"
-        alt="Award badge"
-    />
+            <!-- Date -->
+            <p x-text="date ? new Date(date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' }) : '{{ __('app.date_demo') }}'"
+               class="text-gray-600 italic text-xs sm:text-sm md:text-base text-center">
+            </p>
 
-    <!-- Academy block -->
-    <div
-        class="absolute text-center"
-        style="bottom: 30px; left: 60px; width: 120px;"
-    >
-        <p class="text-gray-500" x-text="academy || '{{ __('app.academy_demo') }}'"></p>
-        <p class="mt-1 border-t border-gray-300 pt-1 text-xs text-gray-400">
-            {{ __('app.academy_label') }}
-        </p>
-    </div>
+            <!-- Award Badge -->
+            <img src="{{ asset('images/award.png') }}"
+                 class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 mt-1"
+                 alt="Award badge" />
+        </div>
 
-    <!-- Director block -->
-    <div
-        class="absolute text-center"
-        style="bottom: 30px; right: 60px; width: 120px;"
-    >
-        <p class="text-gray-500" x-text="director || '{{ __('app.director_demo') }}'"></p>
-        <p class="mt-1 border-t border-gray-300 pt-1 text-xs text-gray-400">
-            {{ __('app.director_label') }}
-        </p>
+        <!-- Bottom Section - Fixed -->
+        <div class="flex justify-between items-end w-full mt-1 sm:mt-2">
+            <!-- Academy block -->
+            <div class="text-center flex-1 max-w-[40%]">
+                <p class="text-gray-500 text-xs sm:text-sm md:text-base leading-tight truncate"
+                   x-text="academy || '{{ __('app.academy_demo') }}'">
+                </p>
+                <div class="border-t border-gray-300 mt-1 pt-1">
+                    <p class="text-xs sm:text-xs md:text-sm text-gray-400">
+                        {{ __('app.academy_label') }}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Spacer -->
+            <div class="flex-1"></div>
+
+            <!-- Director block -->
+            <div class="text-center flex-1 max-w-[40%]">
+                <p class="text-gray-500 text-xs sm:text-sm md:text-base leading-tight truncate"
+                   x-text="director || '{{ __('app.director_demo') }}'">
+                </p>
+                <div class="border-t border-gray-300 mt-1 pt-1">
+                    <p class="text-xs sm:text-xs md:text-sm text-gray-400">
+                        {{ __('app.director_label') }}
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
