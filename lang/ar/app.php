@@ -67,6 +67,10 @@ return [
     'field_director_name' => 'اسم المدير',
     'field_academy_name' => 'اسم الأكاديمية',
     'field_completion_date' => 'تاريخ الإنجاز',
+    'remove_logo' => 'إزالة الشعار',
+    'upload_logo' => 'رفع الشعار',
+    'optional' => 'انتبه لأبعاد الشعار',
+    'field_logo' => 'شعارك',
 
     // زر وملاحظات
     'button_generate' => 'إنشاء الشهادة',

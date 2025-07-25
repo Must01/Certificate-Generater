@@ -67,6 +67,10 @@ return [
     'field_director_name' => "Director's Name",
     'field_academy_name' => 'Academy Name',
     'field_completion_date' => 'Completion Date',
+    'remove_logo' => 'Remove Logo',
+    'upload_logo' => 'Upload Logo',
+    'optional' => 'Be careful with the Dimensions of the logo',
+    'field_logo' => 'Your Logo',
 
     // Button & notes
     'button_generate' => 'Generate Certificate',
