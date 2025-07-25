@@ -91,7 +91,7 @@ If you have suggestions or need a custom certificate generator:
 
 Mustapha Bouddahr
 📧 mustaphabouddahr.dev@gmail.com
-💼 [[Fiverr Profile](https://www.fiverr.com/s/P28jbeE)
-🔗 [[LinkedIn Profile]](https://www.linkedin.com/in/mustapha-bouddahr-830787338/)
+💼 [Fiverr Profile](https://www.fiverr.com/s/P28jbeE)
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mustapha-bouddahr-830787338/)
 
-🧠 Made with Laravel + ❤️ in Morocco 🇲🇦 By [[Mustapha Bouddahr}(https://linktr.ee/mustaphabouddahr)
+🧠 Made with Laravel + ❤️ in Morocco 🇲🇦 By [Mustapha Bouddahr](https://linktr.ee/mustaphabouddahr)
