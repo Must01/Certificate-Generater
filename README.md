@@ -52,20 +52,28 @@ All texts and UI adapt to the selected locale. Translations handled through `res
 
 ## 📂 Installation (Local Development)
 
-```bash
-# 1. Clone the project
+1. Clone the project
+```
 git clone https://github.com/yourusername/certificate-generator.git
 cd certificate-generator
+```
 
 # 2. Install dependencies
+```
 composer install
+```
 
 # 3. Copy .env and generate key
+```
 cp .env.example .env
 php artisan key:generate
+```
 
 # 4. Serve the app
+```
 php artisan serve
+```
+
 👉 Open your browser and visit:
 http://localhost:8000/
 
