@@ -1,85 +1,97 @@
 # 🎓 Certificate Generator Web App
 
-A simple Laravel-based web application that allows users to generate professional-looking PDF certificates through a form interface.
+A modern, bilingual (🇺🇸 English & 🇲🇦 Arabic) Laravel web app that allows users to generate professional-looking PDF certificates in seconds.
 
 🔗 **Live Demo:**  
-[https://certificate-generater.laravel.cloud](https://certificate-generater.laravel.cloud)
+[https://certificate-generater.laravel.cloud](https://certificate-generator.laravel.cloud)
 
 ---
 
 ## 📷 Demo
-
-<img width="1908" height="956" alt="image" src="https://github.com/user-attachments/assets/dd57cfef-dc49-4443-a093-3d83641dff5c" />
+<img width="1880" height="965" alt="preview" src="https://github.com/user-attachments/assets/cc1b3e6d-9ad0-4028-b5a6-9483f97913b3" />
 
 ---
 
 ## 🚀 Features
 
-- Responsive form for entering certificate details.
-- Real-time preview with blur hover effect.
-- Generates downloadable PDF certificates.
-- Custom certificate template.
-- Clean and minimal UI.
-- No database required (works with SQLite but not used).
+✅ Responsive form to input:
+- Full Name  
+- Course Name  
+- Academy & Director  
+- Date   
+- **Custom Logo Upload**
+
+✅ Live Preview (real-time)  
+✅ Downloadable PDF generation (via Laravel DomPDF)  
+✅ **RTL/LTR support** with separate layout styles for Arabic and English  
+✅ Clean modern UI with Tailwind CSS  
+✅ No database setup required  
+✅ Simple and intuitive experience
+
+---
+
+## 🌍 Languages Supported
+
+- English 🇺🇸
+- Arabic 🇲🇦
+
+All texts and UI adapt to the selected locale. Translations handled through `resources/lang/{locale}`.
 
 ---
 
 ## 🛠 Built With
 
-- Laravel 12.x
-- Laravel DomPDF package
-- Blade templates
-- Vanilla CSS
-- PHP 8.2+
-- tcpdf library
+- **Laravel 12.x**
+- **Laravel TCPDF** (`tecnickcom/TCPDF`)
+- **Alpine.js** for live reactivity
+- **Blade Components**
+- **Tailwind CSS**
+- **PHP 8.2+**
 
 ---
 
 ## 📂 Installation (Local Development)
 
-1. **Clone the project:**
-
-```bash
+1. Clone the project
+```
 git clone https://github.com/yourusername/certificate-generator.git
 cd certificate-generator
 ```
 
-Install dependencies:
-
+# 2. Install dependencies
 ```
 composer install
 ```
 
-Set up environment variables:
+# 3. Copy .env and generate key
 ```
 cp .env.example .env
 php artisan key:generate
 ```
-Run the app:
+
+# 4. Serve the app
 ```
 php artisan serve
-Visit http://localhost:8000/certificate in your browser.
 ```
+
+👉 Open your browser and visit:
+http://localhost:8000/
 
 📄 Usage
 
-Fill the form fields.
-Click Generate Certificate.
-A PDF will be generated and downloaded automatically.
+1. Fill out the form with all required details
+2. Select a certificate type (e.g. Participation, Appreciation, etc.)
+3. Upload your organization’s logo
+4. Click “Generate Certificate”
+5. The certificate is downloaded as a PDF file and matches the live preview!
 
-📌 TODO / Roadmap
-
-Add multi-language support.
-Allow uploading custom backgrounds.
-Save certificates history (optional).
-Add email certificate delivery (optional).
-
-Improve design and animations.
 
 📬 Contact
-For questions or custom certificate generators:
+If you have suggestions or need a custom certificate generator:
+
 Mustapha Bouddahr
-[Your Fiverr Profile Link]
-[Your LinkedIn Profile Link]
+📧 mustaphabouddahr.dev@gmail.com
+💼 [Fiverr Profile](https://www.fiverr.com/s/P28jbeE)
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mustapha-bouddahr-830787338/)
 
-
+🧠 Made with Laravel + ❤️ in Morocco 🇲🇦 By [Mustapha Bouddahr](https://linktr.ee/mustaphabouddahr)
