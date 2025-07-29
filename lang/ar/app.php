@@ -91,6 +91,11 @@ return [
     'course_demo' => 'اسم دورة',
     'academy_demo' => 'إسم الإكاديمية',
     'director_demo' =>'إسم المدير',
-    'date_demo' => 'تاريخ'
+    'date_demo' => 'تاريخ',
+
+    'portfolio' => 'موقعي الشخصي',
+    'portfolio_desc' => 'اكتشف مشاريعي وأعمالي السابقة',
+    'paypal'            => 'باي بال',
+    'paypal_desc'       => 'ادعمني عبر باي بال',
 
 ];

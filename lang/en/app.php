@@ -91,5 +91,10 @@ return [
     'course_demo' => "Course Name",
     'academy_demo' => 'Academy Name',
     'director_demo' =>'Director Name',
-    'date_demo' => 'Date'
+    'date_demo' => 'Date',
+
+    'portfolio' => 'my portfolio',
+    'portfolio_desc' => 'Discover my projects and past work',
+    'paypal'            => 'PayPal',
+    'paypal_desc'       => 'Support me via PayPal',
 ];

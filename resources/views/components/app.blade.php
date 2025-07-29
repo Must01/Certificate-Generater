@@ -14,6 +14,8 @@
             body { font-family: 'Cairo', sans-serif; }
         </style>
     @endif
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 <body class="h-full">
 <div class="min-h-full">
@@ -130,7 +132,7 @@
                     <span class="text-[#2E382E] font-medium">{{ __('app.made_with') }}</span>
                     <span class="animate-pulse">💖</span>
                     <span class="text-[#2E382E] font-medium"> {{ __('app.by') }} </span>
-                    <a href="https://linktr.ee/mustaphabouddahr" target="_blank" class="text-[#50C9CE] mr-1 hover:text-[#45b0b4] font-semibold transition-colors">
+                    <a href="https://mustaphabouddahr.netlify.app" target="_blank" class="text-[#50C9CE] mr-1 hover:text-[#45b0b4] font-semibold transition-colors">
                         {{ __('app.name') }}
                     </a>
                 </div>
@@ -142,7 +144,7 @@
                         </svg>
                         <span class="font-medium">GitHub</span>
                     </a>
-                    <a href="https://www.buymeacoffee.com/mustaphabouddahr" target="_blank"
+                    <a href="https://ko-fi.com/mustaphabouddahr" target="_blank"
                         class="group flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-black font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300">
                         <span class="text-xl group-hover:rotate-12 transition-transform duration-300">☕</span>
                         <span>{{ __('app.buy_coffee') }}</span>
